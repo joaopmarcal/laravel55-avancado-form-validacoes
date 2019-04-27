@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
+    const TYPE_INDIVIDUAL = 'Individual';
+    const TYPE_LEGAL = 'legal';
     const MARITAL_STATUS= [
       1 => 'Solteiro',
-      1 => 'Casado',
-      1 => 'Divorciado'
+      2 => 'Casado',
+      3 => 'Divorciado'
     ];
 
     protected $fillable = [

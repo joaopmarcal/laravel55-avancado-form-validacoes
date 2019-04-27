@@ -24,7 +24,7 @@ class CreateClientsTable extends Migration
             $table->char('sex')->nullable();
             $table->enum('marital_status', array_keys(\App\Client::MARITAL_STATUS))->nullable();
             $table->string('physical_disability')->nullable();
-            $table->string('company_name')->mullable();
+            $table->string('company_name')->nullable();
             $table->string('client_type');
             $table->timestamps();
         });
