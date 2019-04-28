@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "207f8feeaa6d6e78b61b8d89dd5c93fb",
+    "content-hash": "529f54dcb9558393bcabe8ec3fa78288",
     "packages": [
         {
             "name": "codeedu/code_validator",
