@@ -5,10 +5,11 @@
     <a class="btn btn-primary" href="{{ route('clients.edit',['client' => $client->id]) }}">Editar</a>
     <a class="btn btn-danger" href="{{ route('clients.destroy',['client' => $client->id]) }}"
        onclick="event.preventDefault();if(confirm('Deseja excluir este item?')){document.getElementById('form-delete').submit();}">Excluir</a>
-    <form id="form-delete" style="display: none" action="{{ route('clients.destroy',['client' => $client->id]) }}" method="post">
-        {{csrf_field()}}
-        {{method_field('DELETE')}}
-    </form>
+    {{--<form id="form-delete" style="display: none" action="{{ route('clients.destroy',['client' => $client->id]) }}" method="post">--}}
+    {{Form::open(['route' => ['clients.destroy',$client->id],'method' => 'DELETE', 'id' => 'form-delete'])}}
+        {{--csrf_field()--}}
+        {{--method_field('DELETE')--}}
+    {{Form::close()}}
     <a class="btn btn-primary" href="{{ route('clients.store',['client' => $client->id]) }}">Voltar</a>
     <br><br>
     <table class="table table-bordered">

@@ -6,8 +6,10 @@
     <a href="{{route('clients.create',['client_type' => \App\Client::TYPE_INDIVIDUAL])}}">Pessoa Física</a> |
     <a href="{{route('clients.create',['client_type' => \App\Client::TYPE_LEGAL])}}">Pessoa Jurídica</a>
     @include('form._form_errors')
-    <form action="{{ route('clients.store') }}" method="post">
+    {{-- <form action="{{ route('clients.store') }}" method="post">--}}
+    {{ Form::open(['route' => 'clients.store']) }}
         @include('admin.clients._form')
         <button type="submit" class="btn btn-default">Criar</button>
-    </form>
+    {{Form::close()}}
+    {{--</form>--}}
 @endsection
