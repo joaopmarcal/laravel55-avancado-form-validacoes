@@ -3,9 +3,9 @@
 @component('form._form_group',['field' => 'name'])
     {{Form::label('name','Nome',['class' => 'control-label']) }}
     {{Form::text('name',null,['class' => 'form-control']) }}
-    <!--<label for="name">Nome</label>-->
-    <!--<input class="form-control" id="name" name="name" value="{{old('name',$client->name)}}">-->
 @endcomponent
+    <!--<label for="name">Nome</label>-->
+    <!--<input class="form-control" id="name" name="name" value="{{--old('name',$client->name)--}}">-->
 
 @component('form._form_group',['field' => 'document_number'])
     <!--<label for="document_number">Documento</label>-->

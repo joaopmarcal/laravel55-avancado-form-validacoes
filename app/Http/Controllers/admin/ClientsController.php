@@ -17,7 +17,7 @@ class ClientsController extends Controller
     public function index()
     {
         \Session::flash('chave','valor');
-        $clients = \App\Client::all();
+        $clients = \App\Client::paginate(5);
         return view('admin.clients.index',compact('clients'));
     }
 
@@ -40,7 +40,7 @@ class ClientsController extends Controller
      */
     public function store(ClientRequest $request)
     {
-        $data = $this->only(array_keys($request->rules()));
+        $data = $request->only($request->rules());
         $data['defaulter'] = $request->has('defaulter');
         $data['client_type'] = Client::getClientType($request->client_type);
         Client::create($data);
@@ -81,7 +81,7 @@ class ClientsController extends Controller
      */
     public function update(ClientRequest $request, Client $client)
     {
-        $data = $request->only(array_keys($request->rules()));
+        $data = $request->only($request->rules());
         $data['defaulter'] = $request->has('defaulter');
         $client->fill($data);
         $client->save();
