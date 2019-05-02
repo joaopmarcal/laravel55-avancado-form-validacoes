@@ -42,7 +42,7 @@ class Client extends Model
 
     public function getDateBirthFormattedAttribute()
     {
-        return $this->client_type == self::TYPE_INDIVIDUAL ? (new \DateTime($this->date_birth))->format('d/m/y') : "";
+        return $this->client_type == self::TYPE_INDIVIDUAL ? (new \DateTime($this->date_birth))->format('d/m/Y'): "";
     }
 
     public function getDocumentNumberFormattedAttribute()

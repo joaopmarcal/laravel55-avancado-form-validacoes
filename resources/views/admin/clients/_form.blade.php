@@ -49,7 +49,7 @@
         }}
     @endcomponent
     @component('form._form_group',['field' => 'date_birth'])
-        {{Form::label('date_birth','Data Nasc.',['class' => 'control-label'])}}
+        {{Form::label('date_birth','Data Nasc.(formato:Y-m-d)',['class' => 'control-label'])}}
         {{Form::text('date_birth',null,['class' => 'form-control'])}}
     @endcomponent
     @php
